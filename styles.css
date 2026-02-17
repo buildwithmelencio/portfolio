@@ -61,6 +61,7 @@ img{ max-width:100%; display:block; }
 .site-header{
   position:sticky;
   top:0;
+  padding: 5px 20px;
   backdrop-filter:saturate(160%) blur(10px);
   background: color-mix(in oklab, var(--bg) 75%, transparent);
   border-bottom:1px solid var(--line);
