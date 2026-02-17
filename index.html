@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name — Portfolio</title>
+    <meta name="description" content="Portfolio site for Your Name: projects, services, and contact." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="nav">
+        <a class="logo" href="#top" aria-label="Go to top">
+          <span class="logo-mark">⬣</span>
+          <span class="logo-text">YourName</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+
+        <div id="nav-links" class="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact" class="btn small">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Web App Orchestrator • Automation • AI</p>
+            <h1>
+              I build calm, reliable systems that turn leads into booked calls — automatically.
+            </h1>
+            <p class="lead">
+              Portfolio of projects in CRM automation, chatbots, and workflow orchestration.
+              Built for speed, clarity, and real-world ops.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn" href="#projects">See projects</a>
+              <a class="btn ghost" href="assets/YourName-Resume.pdf" target="_blank" rel="noopener">
+                Download resume
+              </a>
+            </div>
+
+            <div class="meta">
+              <div class="pill">Based in: Philippines</div>
+              <div class="pill">Focus: CRM + Automation</div>
+              <div class="pill">Tools: GHL/Make/OpenAI</div>
+            </div>
+          </div>
+
+          <div class="card hero-card">
+            <div class="card-inner">
+              <div class="avatar" aria-hidden="true">🙂</div>
+              <h2 class="card-title">Your Name</h2>
+              <p class="card-sub">Automation & Web Systems</p>
+              <div class="card-links">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/yourusername/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:you@email.com">Email</a>
+              </div>
+              <hr />
+              <p class="small">
+                Current: building dashboards, automations, and AI assistants for businesses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-head">
+            <h2>Projects</h2>
+            <p>Some things I’ve built. Swap these with your real projects and links.</p>
+          </div>
+
+          <div class="grid cards">
+            <article class="card project">
+              <h3>AI Appointment Setter</h3>
+              <p>
+                Conversational agent that qualifies leads and books appointments, with SMS/email follow-ups.
+              </p>
+              <ul class="tags">
+                <li>OpenAI</li><li>Make</li><li>CRM</li>
+              </ul>
+              <div class="card-actions">
+                <a class="link" href="#" target="_blank" rel="noopener">Live demo</a>
+                <a class="link" href="#" target="_blank" rel="noopener">Case study</a>
+              </div>
+            </article>
+
+            <article class="card project">
+              <h3>Usage Dashboard</h3>
+              <p>
+                Password-protected dashboard showing remaining credits, billing status, and activity logs.
+              </p>
+              <ul class="tags">
+                <li>Softr</li><li>Airtable</li><li>Stripe</li>
+              </ul>
+              <div class="card-actions">
+                <a class="link" href="#" target="_blank" rel="noopener">Screenshots</a>
+                <a class="link" href="#" target="_blank" rel="noopener">Write-up</a>
+              </div>
+            </article>
+
+            <article class="card project">
+              <h3>SMS Gateway Alternative</h3>
+              <p>
+                SMS sending workflow using webhooks + Android gateway app, designed as a lightweight add-on.
+              </p>
+              <ul class="tags">
+                <li>Webhooks</li><li>Make</li><li>HTTPSMS</li>
+              </ul>
+              <div class="card-actions">
+                <a class="link" href="#" target="_blank" rel="noopener">Architecture</a>
+                <a class="link" href="#" target="_blank" rel="noopener">Notes</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="about">
+        <div class="container two-col">
+          <div>
+            <h2>About</h2>
+            <p>
+              Write a short, human intro here. What you do, who you help, what you like building.
+            </p>
+            <p>
+              Example: I design automation that feels boring in the best way: predictable, observable,
+              and easy to maintain.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Highlights</h3>
+            <ul class="bullets">
+              <li>CRM pipeline + lifecycle automation</li>
+              <li>AI assistants for web + social channels</li>
+              <li>Clean handoffs: lead → qualify → book → follow-up</li>
+              <li>Obsessed with edge cases and “what breaks at 2am”</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-head">
+            <h2>Services</h2>
+            <p>Clear offerings reduce back-and-forth. Keep it simple.</p>
+          </div>
+
+          <div class="grid cards">
+            <article class="card">
+              <h3>Automation Build</h3>
+              <p>Design + implement workflows (lead capture, follow-ups, reminders, notifications).</p>
+            </article>
+            <article class="card">
+              <h3>AI Assistant Setup</h3>
+              <p>FAQ bot + appointment booking + handoff to a human closer when needed.</p>
+            </article>
+            <article class="card">
+              <h3>Systems Audit</h3>
+              <p>Find leaks and failure points; deliver a prioritized fix list and quick wins.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="contact">
+        <div class="container two-col">
+          <div>
+            <h2>Contact</h2>
+            <p>
+              Easiest: email me. Or use the form (powered by Formspree) if you want.
+            </p>
+
+            <div class="contact-cards">
+              <a class="card contact" href="mailto:you@email.com">
+                <span class="contact-kicker">Email</span>
+                <span class="contact-value">you@email.com</span>
+              </a>
+              <a class="card contact" href="https://github.com/yourusername" target="_blank" rel="noopener">
+                <span class="contact-kicker">GitHub</span>
+                <span class="contact-value">@yourusername</span>
+              </a>
+              <a class="card contact" href="https://www.linkedin.com/in/yourusername/" target="_blank" rel="noopener">
+                <span class="contact-kicker">LinkedIn</span>
+                <span class="contact-value">/in/yourusername</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Quick message</h3>
+            <form class="form" action="https://formspree.io/f/yourFormId" method="POST">
+              <label>
+                Name
+                <input name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Email
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="5" required></textarea>
+              </label>
+              <button class="btn" type="submit">Send</button>
+              <p class="small muted">
+                Replace the Formspree link with your own, or remove this form and keep email-only.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p class="small muted">© <span id="year"></span> Your Name. Built on GitHub Pages.</p>
+        <div class="footer-links">
+          <a href="#top">Top</a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
