@@ -366,3 +366,27 @@ textarea{ resize:vertical; }
   clip:rect(0,0,0,0);
   white-space:nowrap;border:0;
 }
+
+/* Add a reusable padding helper */
+.card.pad { padding: 1.2rem; }
+
+/* Fix padding for Services cards */
+.card.service{
+  padding: 1.2rem;
+}
+.card.service h3{ margin:.1rem 0 .6rem; }
+.card.service p{ margin:0; color:var(--muted); }
+
+/* Contact cards spacing inside the grid */
+.contact-grid{
+  grid-template-columns: repeat(3, 1fr);
+}
+.card.contact{
+  padding: 1.2rem; /* slightly more consistent with other cards */
+}
+
+/* Responsive: contact grid becomes 1 column */
+@media (max-width: 900px){
+  .contact-grid{ grid-template-columns: 1fr; }
+}
+
