@@ -217,8 +217,8 @@ h1{
 .hero-card .card-inner{ padding:1.3rem; }
 
 .avatar-img{
-  width: 76px;
-  height: 76px;
+  width: 100%;
+  height: auto;
   border-radius: 18px;
   object-fit: cover;
   display: block;
