@@ -6,17 +6,27 @@
     <title>Melencio Lomod Jr — Portfolio</title>
     <meta name="description" content="Portfolio site for Melencio Lomod Jr: projects, services, and contact." />
     <meta name="color-scheme" content="light dark" />
+
+    <!-- Lexend Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <nav class="nav">
+      <nav class="nav container">
         <a class="logo" href="#top" aria-label="Go to top">
           <span class="logo-mark">⬣</span>
-          <span class="logo-text">Melencio Lomod Jr</span>
+          <span class="logo-text">Melencio</span>
         </a>
 
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
@@ -28,7 +38,9 @@
           <a href="#projects">Projects</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
-          <a href="#contact" class="btn small">Contact</a>
+
+          <!-- Booking opens modal -->
+          <a href="#" class="btn small" data-booking-open>Book a call</a>
         </div>
       </nav>
     </header>
@@ -38,7 +50,9 @@
         <div class="container hero-grid">
           <div>
             <p class="eyebrow">Web App Orchestrator • Automation • AI</p>
+
             <h1>I build calm, reliable systems that turn leads into booked calls — automatically.</h1>
+
             <p class="lead">
               Portfolio of projects in CRM automation, chatbots, and workflow orchestration.
               Built for speed, clarity, and real-world ops.
@@ -46,10 +60,7 @@
 
             <div class="hero-actions">
               <a class="btn" href="#projects">See projects</a>
-              <!-- If you add a resume PDF later, place it at assets/Melencio-Lomod-Jr-Resume.pdf -->
-              <a class="btn ghost" href="assets/Melencio-Lomod-Jr-Resume.pdf" target="_blank" rel="noopener">
-                Download resume
-              </a>
+              <a class="btn ghost" href="#" data-booking-open>Book a discovery call</a>
             </div>
 
             <div class="meta">
@@ -62,19 +73,22 @@
           <div class="card hero-card">
             <div class="card-inner">
               <img
-  class="avatar-img"
-  src="https://avatars.githubusercontent.com/u/262126528"
-  alt="Melencio Lomod Jr portrait"
-/>
+                class="avatar-img"
+                src="https://avatars.githubusercontent.com/u/262126528"
+                alt="Melencio Lomod Jr portrait"
+              />
 
               <h2 class="card-title">Melencio Lomod Jr</h2>
               <p class="card-sub">Web App Orchestrator • Automation</p>
+
               <div class="card-links">
                 <a href="https://github.com/buildwithmelencio" target="_blank" rel="noopener">GitHub</a>
                 <a href="https://www.linkedin.com/in/melenciolomodjr/" target="_blank" rel="noopener">LinkedIn</a>
                 <a href="mailto:melenciolomodjr@gmail.com">Email</a>
               </div>
+
               <hr />
+
               <p class="small">
                 I build automations, dashboards, and AI assistants that don’t crumble when real users do real things.
               </p>
@@ -141,13 +155,14 @@
           <div>
             <h2>About</h2>
             <p>
-              I’m Melencio — I orchestrate web apps and automations that keep businesses moving:
-              lead capture, qualification, booking, follow-ups, and “what happens next” systems.
+              I’m Melencio — I orchestrate web apps and automations that keep businesses moving: lead
+              capture, qualification, booking, follow-ups, and “what happens next” systems.
             </p>
             <p>
               My vibe is practical engineering: clean workflows, clear handoffs, and fewer 2am surprises.
             </p>
           </div>
+
           <div class="card pad">
             <h3>Highlights</h3>
             <ul class="bullets">
@@ -172,10 +187,12 @@
               <h3>Automation Build</h3>
               <p>Design + implement workflows (lead capture, follow-ups, reminders, notifications).</p>
             </article>
+
             <article class="card service">
               <h3>AI Assistant Setup</h3>
               <p>FAQ bot + appointment booking + clean handoff to a human closer when needed.</p>
             </article>
+
             <article class="card service">
               <h3>Systems Audit</h3>
               <p>Find leaks and failure points; deliver a prioritized fix list and quick wins.</p>
@@ -207,6 +224,10 @@
               <span class="contact-value">/in/melenciolomodjr</span>
             </a>
           </div>
+
+          <div class="contact-cta">
+            <a class="btn" href="#" data-booking-open>Book A Discovery Call</a>
+          </div>
         </div>
       </section>
     </main>
@@ -221,6 +242,45 @@
         </div>
       </div>
     </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="booking-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-modal-close></div>
+
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+        <div class="modal-header">
+          <h3 id="booking-title">Book a Discovery Call</h3>
+
+          <div class="modal-actions">
+            <a
+              class="btn small ghost"
+              href="https://calendar.app.google/CCQGnSHv1eRjo9Vc8"
+              target="_blank"
+              rel="noopener"
+              title="Open booking link in a new tab"
+            >
+              Open in new tab
+            </a>
+
+            <button class="icon-btn" type="button" aria-label="Close modal" data-modal-close>
+              ✕
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <!-- NOTE: Some Google booking pages may block iframes. If that happens,
+               the “Open in new tab” button still works. -->
+          <iframe
+            class="modal-iframe"
+            src="https://calendar.app.google/CCQGnSHv1eRjo9Vc8"
+            title="Booking calendar"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          ></iframe>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
