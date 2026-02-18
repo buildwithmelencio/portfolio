@@ -88,3 +88,22 @@ closeButtons?.forEach((btn) => btn.addEventListener("click", closeModal));
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal?.classList.contains("is-open")) closeModal();
 });
+
+// Referral note: read ?ref-id=someone and show in footer
+(function referralFooter() {
+  const params = new URLSearchParams(window.location.search);
+  const refId = params.get("ref-id"); // matches ?ref-id=ryanlee
+
+  const note = document.getElementById("referral-note");
+  if (!note) return;
+
+  // Basic safety: only allow simple handle-like values
+  // (letters, numbers, underscore, dash, dot; 2-40 chars)
+  const ok = typeof refId === "string" && /^[a-zA-Z0-9_.-]{2,40}$/.test(refId);
+
+  if (!ok) return;
+
+  note.textContent = `${refId} referred you to me`;
+  note.hidden = false;
+})();
+
