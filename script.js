@@ -44,7 +44,7 @@ document.addEventListener("click", (e) => {
 });
 
 // Booking modal
-const BOOKING_URL = "https://calendar.app.google/CCQGnSHv1eRjo9Vc8";
+const BOOKING_URL = "https://calendar.app.google/U5Ynem1buLrEHiAa9";
 const modal = document.getElementById("booking-modal");
 const iframe = modal?.querySelector(".modal-iframe");
 const openButtons = document.querySelectorAll("[data-booking-open]");
